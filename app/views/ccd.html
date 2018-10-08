@@ -1,5 +1,5 @@
 
-{% extends "layout.html" %}
+{% extends "layout-ccd.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -9,26 +9,36 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">
+      <!--<h1 class="govuk-heading-xl">
         CCD 
         <span class="govuk-caption-xl"></span>
       </h1>
       <p>
         Mockup of the CCD solution
-      </p>
+      </p>-->
 
 		
 		
 		
 		
       <p>
-      
+      <div class="form-group" style="float: right;">
+    <label _ngcontent-c18="" class="govuk-body" for="next-step">Next step</label>
+    <select _ngcontent-c18="" class="govuk-select" formcontrolname="trigger" id="next-step">
+      <!----><option _ngcontent-c18="" data-default="" value="">Select action</option>
+      <!----><option _ngcontent-c18="" value="1: Object" title="Selecting the orders needed for application">Select orders &amp; directions</option><option _ngcontent-c18="" value="2: Object" title="Selecting the hearing needed for application">Select hearing</option><option _ngcontent-c18="" value="3: Object" title="Entering the children for the case">Enter children in the case</option><option _ngcontent-c18="" value="4: Object" title="Entering the respondents for the case">Enter respondents in the case</option><option _ngcontent-c18="" value="5: Object" title="Entering the applicant for the case">Enter applicant in the case</option><option _ngcontent-c18="" value="6: Object" title="Entering others for the case">Enter others who need notice</option><option _ngcontent-c18="" value="7: Object" title="Entering the grounds for the application">Enter grounds for application</option><option _ngcontent-c18="" value="8: Object" title="Entering opinion on risk and harm to children">Enter risk &amp; harm to children</option><option _ngcontent-c18="" value="9: Object" title="Entering the factors affecting parenting">Factors affecting parenting</option><option _ngcontent-c18="" value="10: Object" title="Entering the international element">Enter international element</option><option _ngcontent-c18="" value="11: Object" title="Entering other proceedings and allocation proposals">Enter other proceedings</option><option _ngcontent-c18="" value="12: Object" title="Enter extra support needed for anyone to take part in hearing" selected="selected">Attending hearing</option><option _ngcontent-c18="" value="13: Object" title="Entering other proceedings and allocation proposals">Enter allocation proposal</option><option _ngcontent-c18="" value="14: Object" title="Upload documents">Upload documents</option><option _ngcontent-c18="" value="15: Object" title="Amend case title">Amend case title</option>
+    </select> <button type="submit" class="govuk-button">
+  Go
+</button>
+  </div>
 
       <h2 class="govuk-heading-m"> #1538-9974-0402-9510  <button type="submit" class="govuk-button-" style="background-color: #dee0e2; position: relative; display: inline-block; padding: .526315em .789473em .263157em; border: none; border-radius: 0; outline: transparent solid 1px;outline-offset: -1px;
 
 -webkit-appearance: none; box-shadow: 0 2px 0 #b5babe; font-size: .75em; line-height: 1.25; text-decoration: none; -webkit-font-smoothing: antialiased; cursor: pointer: color: #0b0c0c;">
  Print
-</button></h2>
+</button></h2> 
+		
+		
 		
 		<div class="govuk-tabs" data-module="tabs">
   <h2 class="govuk-tabs__title">
@@ -37,7 +47,7 @@
 
   <ul class="govuk-tabs__list">
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+      <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#history">
         History
       </a>
     </li>
@@ -63,31 +73,31 @@
     </li>
   </ul>
 
-  <section class="govuk-tabs__panel" id="past-day">
+  <section class="govuk-tabs__panel" id="history">
     <h2 class="govuk-heading-l">History</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="col">Case manager</th>
-          <th class="govuk-table__header" scope="col">Cases opened</th>
-          <th class="govuk-table__header" scope="col">Cases closed</th>
+          <th class="govuk-table__header" scope="col">Event</th>
+          <th class="govuk-table__header" scope="col">Date</th>
+          <th class="govuk-table__header" scope="col">Author</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">David Francis</td>
-          <td class="govuk-table__cell ">3</td>
-          <td class="govuk-table__cell ">0</td>
+          <td class="govuk-table__cell"><a href="#">Initiate case </a></td>
+          <td class="govuk-table__cell ">25 Apr 2018, 3:00:01 PM </td>
+          <td class="govuk-table__cell ">Eric COOPER</td>
         </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Farmer</td>
-          <td class="govuk-table__cell ">1</td>
-          <td class="govuk-table__cell ">0</td>
+          <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Initiate case </a></td>
+          <td class="govuk-table__cell ">25 Apr 2018, 3:00:01 PM </td>
+          <td class="govuk-table__cell ">Eric COOPER</td>
         </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell ">2</td>
-          <td class="govuk-table__cell ">0</td>
+		    <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Initiate case </a></td>
+          <td class="govuk-table__cell ">25 Apr 2018, 3:00:01 PM </td>
+          <td class="govuk-table__cell ">Eric COOPER</td>
         </tr>
       </tbody>
     </table>
