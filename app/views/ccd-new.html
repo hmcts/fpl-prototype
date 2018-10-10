@@ -1,0 +1,434 @@
+
+{% extends "layout-ccd.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <!--<h1 class="govuk-heading-xl">
+        CCD 
+        <span class="govuk-caption-xl"></span>
+      </h1>
+      <p>
+        Mockup of the CCD solution
+      </p>-->
+
+		
+		
+		
+		
+      <p>
+      <div class="form-group" style="float: right;">
+    <label _ngcontent-c18="" class="govuk-body" for="next-step">Next step</label>
+    <select _ngcontent-c18="" class="govuk-select" formcontrolname="trigger" id="next-step">
+      <!----><option _ngcontent-c18="" data-default="" value="">Select action</option>
+      <!----><option _ngcontent-c18="" value="1: Object" title="Selecting the orders needed for application">Select orders &amp; directions</option><option _ngcontent-c18="" value="2: Object" title="Selecting the hearing needed for application">Select hearing</option><option _ngcontent-c18="" value="3: Object" title="Entering the children for the case">Enter children in the case</option><option _ngcontent-c18="" value="4: Object" title="Entering the respondents for the case">Enter respondents in the case</option><option _ngcontent-c18="" value="5: Object" title="Entering the applicant for the case">Enter applicant in the case</option><option _ngcontent-c18="" value="6: Object" title="Entering others for the case">Enter others who need notice</option><option _ngcontent-c18="" value="7: Object" title="Entering the grounds for the application">Enter grounds for application</option><option _ngcontent-c18="" value="8: Object" title="Entering opinion on risk and harm to children">Enter risk &amp; harm to children</option><option _ngcontent-c18="" value="9: Object" title="Entering the factors affecting parenting">Factors affecting parenting</option><option _ngcontent-c18="" value="10: Object" title="Entering the international element">Enter international element</option><option _ngcontent-c18="" value="11: Object" title="Entering other proceedings and allocation proposals">Enter other proceedings</option><option _ngcontent-c18="" value="12: Object" title="Enter extra support needed for anyone to take part in hearing" selected="selected">Attending hearing</option><option _ngcontent-c18="" value="13: Object" title="Entering other proceedings and allocation proposals">Enter allocation proposal</option><option _ngcontent-c18="" value="14: Object" title="Upload documents">Upload documents</option><option _ngcontent-c18="" value="15: Object" title="Amend case title">Amend case title</option>
+    </select> <button type="submit" class="govuk-button">
+  Go
+</button>
+  </div>
+
+      <h2 class="govuk-heading-m"> #1538-9974-0402-9510  <button type="submit" class="govuk-button-" style="background-color: #dee0e2; position: relative; display: inline-block; padding: .526315em .789473em .263157em; border: none; border-radius: 0; outline: transparent solid 1px;outline-offset: -1px;
+
+-webkit-appearance: none; box-shadow: 0 2px 0 #b5babe; font-size: .75em; line-height: 1.25; text-decoration: none; -webkit-font-smoothing: antialiased; cursor: pointer: color: #0b0c0c;">
+ Print
+</button></h2> 
+		
+		
+		
+		<div class="govuk-tabs" data-module="tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+
+  <ul class="govuk-tabs__list">
+	   <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#Actions">
+        Actions
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#history">
+        History
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Orders sought and hearing needed
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-month">
+        People in the case  
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-year">
+       Legal Opinion 
+      </a>
+    </li>
+	  <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-year">
+       Evidence 
+      </a>
+    </li>
+  </ul>
+<section class="govuk-tabs__panel" id="Actions">
+    <h2 class="govuk-heading-l">Actions</h2>
+    
+<div class="govuk-grid-row  ">
+    <h1 class="govuk-heading-l">
+        <span class="govuk-caption-xl">  C110A</span>
+    Apply for a care, supervision or emergency protection order
+
+    </h1>
+
+      <ol class="task-list">
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">1. </span>Enter people in the case
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="-c110a-children?change=false" aria-describedby="eligibility-completed">
+                Children
+              </a>
+              {% if data['key-dates'] and data['child-1-full-name'] and data['child-1-dob-year'] and data['child-1-gender'] and data['child-situation'] and data['care-plan'] and data['child-1-mother-name'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="-c110a-respondent?change=false" aria-describedby="read-declaration-completed">
+                Respondents
+              </a>
+              {% if data['respondent-1-full-name'] and data['respondent-1-gender'] and data['respondent-1-contact-number']and data['respondent-1-child-1-relationship']and data['respondent-1-child-1-full-name']and data['respondent-1-current-address'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+
+
+            </li>
+			  <li class="task-list-item">
+              <a class="task-name" href="-c110a-applicant?change=false" aria-describedby="read-declaration-completed">
+                Applicant
+              </a>
+               {% if data['applicant-full-name'] and data['applicant-contact-name'] and data['applicant-job-title']and data['applicant-address']and data['applicant-mobile-number']and data['la-dx-number'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+			  <li class="task-list-item">
+              <a class="task-name" href="-c110a-others?change=false" aria-describedby="read-declaration-completed">
+                Others who should be given notice
+              </a>
+              {% if data['other-1-full-name'] and data['other-1-gender'] and data['other-1-place-birth']  %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+             
+              {% endif %}
+            </li><!-- -->
+          </ul>
+        </li>
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">2. </span>  Enter legal analysis
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="-c110a-orders?change=false" aria-describedby="company-information-completed">
+               Orders needed
+              </a>
+              {% if data['order-type']  %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="-c110a-urgency?change=false" aria-describedby="contact-details-completed">
+                Hearings needed
+              </a>
+              {% if data['hearing-24-hours'] and data['hearing-12-days'] and data['without-notice'] and data['reduced-notice'] and data['respondents-notified']%}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+
+
+            </li>
+
+			  <li class="task-list-item">
+              <a class="task-name" href="-c110a-grounds?change=false">
+                Grounds for application
+              </a>
+              {% if data['grounds-for-application'] and data['threshold-evidence']  %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+
+            </li>
+
+            <li class="task-list-item">
+                  <a class="task-name" href="-c110a-risk-harm?change=false">
+                   Risks and harm to children
+                  </a>
+                  {% if data['physical-harm'] and data['emotional-harm'] and data['sexual-abuse'] and data['neglect']  %}
+                    <strong class="task-completed" id="eligibility-completed">Completed</strong>
+                  {% else %}
+                  <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+                  {% endif %}
+                </li>
+                <li class="task-list-item">
+                      <a class="task-name" href="-c110a-parenting?change=false">
+                       Factors affecting parenting
+                      </a>
+                        {% if data['alcohol-and-drugs'] and data['mental-health-issues'] and data['domestic-violence'] %}
+                        <strong class="task-completed" id="eligibility-completed">Completed</strong>
+                      {% else %}
+                      <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+                      {% endif %}
+                    </li>
+                <li class="task-list-item">
+                  <a class="task-name" href="-c110a-international?change=false">
+                   International element
+                  </a>
+                  {% if data['international-element'] and data['genogram-outside-uk'] and data['outside-uk'] and data['proceedings-outside-uk']  %}
+                    <strong class="task-completed" id="eligibility-completed">Completed</strong>
+                  {% else %}
+                  <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+                  {% endif %}
+                </li>
+			  <li class="task-list-item">
+              <a class="task-name" href="-c110a-allocation?change=false">
+               Other proceedings and allocation proposal
+              </a>
+              {% if data['previous-proceedings'] and data['allocation-proposal'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="-c110a-attending?change=false">
+              Attending hearing
+              </a>
+              {% if data['interpreter'] and data['intermediary'] and data['litigation-capacity-issues'] and data['learning-disability']  and data['welsh'] and data['security'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+
+
+			  <!--<li class="task-list-item">
+              <a class="task-name" href="-c110a-allocation" aria-describedby="medical-information-completed">
+               Allocation proposal
+              </a><span class="grey-text" style=" float: right;">(optional)</span>
+
+            </li>-->
+          </ul>
+        </li>
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">3. </span> Provide evidence
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="-c110a-upload?change=false">
+                 Upload documents
+              </a>
+                {% if data['ammex-documents-01'] and data['ammex-documents-02'] and data['ammex-documents-03'] and data['ammex-documents-04'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+
+          </ul>
+        </li>
+          </ul>
+        </li>
+
+
+		   <h2 class="task-list-section">
+            <span class="task-list-section-number">4. </span> Review and submit
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="-c110a-review">
+                Check your answers before submitting
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+</div>
+  </section>
+			
+  <section class="govuk-tabs__panel" id="history">
+    <h2 class="govuk-heading-l">History</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Event</th>
+          <th class="govuk-table__header" scope="col">Date</th>
+          <th class="govuk-table__header" scope="col">Author</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Initiate case </a></td>
+          <td class="govuk-table__cell ">25 Apr 2018, 3:00:01 PM </td>
+          <td class="govuk-table__cell ">Eric COOPER</td>
+        </tr>
+          <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Initiate case </a></td>
+          <td class="govuk-table__cell ">25 Apr 2018, 3:00:01 PM </td>
+          <td class="govuk-table__cell ">Eric COOPER</td>
+        </tr>
+		    <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Initiate case </a></td>
+          <td class="govuk-table__cell ">25 Apr 2018, 3:00:01 PM </td>
+          <td class="govuk-table__cell ">Eric COOPER</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-l">Orders sought and hearing needed</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Case manager</th>
+          <th class="govuk-table__header" scope="col">Cases opened</th>
+          <th class="govuk-table__header" scope="col">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell ">24</td>
+          <td class="govuk-table__cell ">18</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell ">16</td>
+          <td class="govuk-table__cell ">20</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell ">24</td>
+          <td class="govuk-table__cell ">27</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+    <h2 class="govuk-heading-l"> People in the case  </h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Case manager</th>
+          <th class="govuk-table__header" scope="col">Cases opened</th>
+          <th class="govuk-table__header" scope="col">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell ">98</td>
+          <td class="govuk-table__cell ">95</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell ">122</td>
+          <td class="govuk-table__cell ">131</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell ">126</td>
+          <td class="govuk-table__cell ">142</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+    <h2 class="govuk-heading-l">  Legal Opinion </h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Case manager</th>
+          <th class="govuk-table__header" scope="col">Cases opened</th>
+          <th class="govuk-table__header" scope="col">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell ">1380</td>
+          <td class="govuk-table__cell ">1472</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell ">1129</td>
+          <td class="govuk-table__cell ">1083</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell ">1539</td>
+          <td class="govuk-table__cell ">1265</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+			 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+    <h2 class="govuk-heading-l">  Evidence  </h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Case manager</th>
+          <th class="govuk-table__header" scope="col">Cases opened</th>
+          <th class="govuk-table__header" scope="col">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell ">1380</td>
+          <td class="govuk-table__cell ">1472</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell ">1129</td>
+          <td class="govuk-table__cell ">1083</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell ">1539</td>
+          <td class="govuk-table__cell ">1265</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+</div>
+
+      
+    </div>
+</div>
+
+{% endblock %}
